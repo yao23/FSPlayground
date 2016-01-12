@@ -4,4 +4,5 @@
     <string name="sign_in_button">Log In</string>
     <string name="sign_up_button">Sign Up</string>
     <string name="sign_in_fb_button">Facebook Login</string>
+    <string name="title_activity_sign_in">Sign In</string>
 </resources>

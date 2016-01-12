@@ -21,7 +21,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:background="@drawable/button_border"/>
+        android:background="@drawable/button_border"
+        android:onClick="FBSignIn"/>
     <LinearLayout
         android:id="@+id/LinearLayout0"
         android:layout_height="wrap_content"
@@ -36,14 +37,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_border"
-            android:text="@string/sign_in_button"/>
+            android:text="@string/sign_in_button"
+            android:onClick="signIn"/>
         <Button
             android:id="@+id/sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_border"
-            android:text="@string/sign_up_button"/>
+            android:text="@string/sign_up_button"
+            android:onClick="signUp"/>
     </LinearLayout>
 
 

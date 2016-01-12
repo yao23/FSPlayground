@@ -1,5 +1,6 @@
 package com.clouds.liyao.fsplayground;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -48,5 +49,26 @@ public class FSPlayActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /** Called when the user clicks the SignIn button */
+    public void signIn(View view) {
+        // Do something in response to button
+        System.out.println("press sign in button");
+
+        Intent intent = new Intent(this, SignInActivity.class);
+        startActivity(intent);
+    }
+
+    /** Called when the user clicks the SignUp button */
+    public void signUp(View view) {
+        // Do something in response to button
+        System.out.println("press sign up button");
+    }
+
+    /** Called when the user clicks the FB SignIn button */
+    public void FBSignIn(View view) {
+        // Do something in response to button
+        System.out.println("press FB sign in button");
     }
 }
