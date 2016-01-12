@@ -22,23 +22,29 @@
         android:layout_height="wrap_content"
         android:text="@string/sign_in_fb_button"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
-    <Button
-        android:id="@+id/sign_in"
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:id="@+id/LinearLayout0"
         android:layout_height="wrap_content"
-        android:layout_above="@id/fb_sign_in"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/sign_in_button"/>
-    <Button
-        android:id="@+id/sign_up"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_above="@id/fb_sign_in"
-        android:layout_toRightOf="@id/sign_in"
-        android:layout_marginRight="20dp"
-        android:layout_alignBottom="@id/sign_in"
-        android:text="@string/sign_up_button"/>
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <Button
+            android:id="@+id/sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sign_in_button"/>
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sign_up_button"/>
+    </LinearLayout>
+
+
 </RelativeLayout>
