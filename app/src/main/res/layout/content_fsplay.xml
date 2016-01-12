@@ -11,15 +11,15 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.clouds.liyao.fsplayground.FSPlayActivity"
     tools:showIn="@layout/activity_fsplay">
-    
+
     <Button
         android:id="@+id/fb_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_in_fb_button"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
     <LinearLayout
         android:id="@+id/LinearLayout0"
         android:layout_height="wrap_content"
