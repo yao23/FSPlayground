@@ -12,4 +12,35 @@
     tools:context="com.clouds.liyao.fsplayground.SignInActivity"
     tools:showIn="@layout/activity_sign_in">
 
+    <EditText android:id="@+id/email_name_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_name_message" />
+
+    <EditText android:id="@+id/password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_name_field"
+        android:hint="@string/password_message" />
+
+    <Button
+        android:id="@+id/sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/password_field"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_border"
+        android:text="@string/sign_in_button"
+        android:onClick="signIn"/>
+    <Button
+        android:id="@+id/forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_border"
+        android:text="@string/forget_password_button"
+        android:onClick="forgetPassword"/>
 </RelativeLayout>
