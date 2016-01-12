@@ -27,4 +27,9 @@ public class SignInActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    /** Called when the user clicks the SignIn button */
+    public void signIn(View view) {
+        // Do something in response to button
+        System.out.println("press sign in button");
+    }
 }

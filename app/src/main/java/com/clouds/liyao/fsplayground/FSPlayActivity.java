@@ -10,6 +10,18 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.clouds.liyao.fsplayground.API.GitAPI;
+import com.clouds.liyao.fsplayground.Model.User;
+
+import java.io.IOException;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.GsonConverterFactory;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
 public class FSPlayActivity extends AppCompatActivity {
 
     @Override
@@ -25,6 +37,45 @@ public class FSPlayActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        String user = "yao23";
+        String baseURL = "https://api.github.com";
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(baseURL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        GitAPI git = retrofit.create(GitAPI.class);
+        Call call = git.getUser(user);
+        call.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Response<User> response) {
+                User model = response.body();
+
+                if (model == null) {
+                    //404 or the response cannot be converted to User.
+                    ResponseBody responseBody = response.errorBody();
+                    if (responseBody != null) {
+                        try {
+                            System.out.println("responseBody = " + responseBody.string());
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        System.out.println("responseBody = null");
+                    }
+                } else {
+                    //200
+                    System.out.println("Github Name :" + model.getName() + "\nWebsite :" + model.getBlog() + "\nCompany Name :" + model.getCompany());
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                System.out.println("t = " + t.getMessage());
             }
         });
     }
