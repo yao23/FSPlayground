@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.clouds.liyao.fsplayground.FSPlayActivity"
-    tools:showIn="@layout/activity_fsplay">
+    tools:showIn="@layout/activity_fsplay"
+    android:background="@drawable/loginback">
 
     <Button
         android:id="@+id/fb_sign_in"
