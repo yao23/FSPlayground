@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by liyao on 1/12/16.
  */
-public class User {
+public class GitModel {
 
 //I created this using http://www.jsonschema2pojo.org/
 //Note that not every model can be created using jsonschema2pojo
@@ -89,37 +89,37 @@ public class User {
     @Expose
     private String updatedAt;
 
-    public String getLogin() {
-        return login;
-    }
+        public String getLogin() {
+            return login;
+        }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
+        public void setLogin(String login) {
+            this.login = login;
+        }
 
-    public Integer getId() {
-        return id;
-    }
+        public Integer getId() {
+            return id;
+        }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+        public void setId(Integer id) {
+            this.id = id;
+        }
 
-    public String getAvatarUrl() {
-        return avatarUrl;
-    }
+        public String getAvatarUrl() {
+            return avatarUrl;
+        }
 
-    public void setAvatarUrl(String avatarUrl) {
-        this.avatarUrl = avatarUrl;
-    }
+        public void setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+        }
 
-    public String getGravatarId() {
-        return gravatarId;
-    }
+        public String getGravatarId() {
+            return gravatarId;
+        }
 
-    public void setGravatarId(String gravatarId) {
-        this.gravatarId = gravatarId;
-    }
+        public void setGravatarId(String gravatarId) {
+            this.gravatarId = gravatarId;
+        }
 
     public String getUrl() {
         return url;

@@ -1,7 +1,7 @@
 package com.clouds.liyao.fsplayground.API;
 
 
-import com.clouds.liyao.fsplayground.Model.User;
+import com.clouds.liyao.fsplayground.Model.GitModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -12,5 +12,5 @@ import retrofit2.http.Path;
  */
 public interface GitAPI {
     @GET("/users/{username}")
-    Call<User> getUser(@Path("username") String username);
+    Call<GitModel> getUser(@Path("username") String username);
 }

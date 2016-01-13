@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.clouds.liyao.fsplayground.API.GitAPI;
-import com.clouds.liyao.fsplayground.Model.User;
+import com.clouds.liyao.fsplayground.Model.GitModel;
 
 import java.io.IOException;
 
@@ -50,13 +50,13 @@ public class FSPlayActivity extends AppCompatActivity {
 
         GitAPI git = retrofit.create(GitAPI.class);
         Call call = git.getUser(user);
-        call.enqueue(new Callback<User>() {
+        call.enqueue(new Callback<GitModel>() {
             @Override
-            public void onResponse(Response<User> response) {
-                User model = response.body();
+            public void onResponse(Response<GitModel> response) {
+                GitModel model = response.body();
 
                 if (model == null) {
-                    //404 or the response cannot be converted to User.
+                    //404 or the response cannot be converted to GitModel.
                     ResponseBody responseBody = response.errorBody();
                     if (responseBody != null) {
                         try {
